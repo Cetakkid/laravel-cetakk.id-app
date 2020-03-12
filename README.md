@@ -1,3 +1,15 @@
+## About Cetakk.id
+
+Cetakk.id is digital printing platform to facilitate customers and vendors of digital printing in conducting online transactions and printing documents practically. The web application support pretty user experience and developed continously. This project built using Laravel 7 & Vue.js. Thanks for support us!
+
+## How to run locally
+
+- Clone this repo git@github.com:Cetakkid/laravel-cetakk.id-app.git
+- Run ```npm run install && npm run dev```
+- Run ```php artisan serve``` and open browser, go to localhost:8000
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
