@@ -2,5 +2,10 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/page-not-found.js": "/page-not-found.js",
-    "/pilih-vendor.js": "/pilih-vendor.js"
+    "/pilih-vendor.js": "/pilih-vendor.js",
+    "/cara-print.js": "/cara-print.js",
+    "/home.js": "/home.js",
+    "/order.js": "/order.js",
+    "/tentang-kami.js": "/tentang-kami.js",
+    "/vendors~home.js": "/vendors~home.js"
 }
