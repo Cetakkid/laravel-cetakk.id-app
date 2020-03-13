@@ -13,6 +13,9 @@ const NotFound = () => import(/* webpackChunkName: "page-not-found" */ '../compo
 const PilihVendor = () => import(/* webpackChunkName: "pilih-vendor" */ '../components/customer/PilihVendor.vue')
 const OrderForm = () => import(/* webpackChunkName: "order" */ '../components/customer/OrderForm.vue' )
 
+const Login = () => import(/* webpackChunkName: "login" */ '../components/auth/Login.vue')
+const Register = () => import(/* webpackChunkName: "register" */ '../components/auth/Register.vue')
+
 Vue.use(Router)
 
 export function createRouter(){
@@ -28,60 +31,41 @@ export function createRouter(){
         component: NotFound,
         name: 'page-not-found'
       },
-      { 
-        path: '/', 
-        name: 'based',
-        component: Based,
-        children: [
-            {
-                path: '',
-                component: Home,
-                name: 'home'
-            },
-            {
-                path: '/home',
-                component: Home,
-                name: 'home'
-            },
-            { 
-                path: '/tentang', 
-                component: TentangKami,
-                name: 'tentang-kami' 
-            },
-            { 
-                path: '/cara', 
-                component: CaraPrint,
-                name: 'cara-print' 
-            },
-            { 
-              path: '/dashboard-customer', 
-              component: PilihVendor,
-              name: 'pilih-vendor'
-            },
-            { 
-              path: '/order/:id', 
-              component: OrderForm,
-              name: 'order'
-            },
-        ]
+      {
+        path: '/',
+        component: Home,
+        name: 'home'
       },
-      /*
+      {
+        path: '/login',
+        component: Login,
+        name: 'login'
+      },
+      {
+        path: '/register',
+        component: Register,
+        name: 'register'
+      },
+      {
+          path: '/tentang',
+          component: TentangKami,
+          name: 'tentang-kami'
+      },
+      {
+          path: '/cara',
+          component: CaraPrint,
+          name: 'cara-print'
+      },
       {
         path: '/dashboard-customer',
-        name: 'DashboardCustomer',
-        component: DashboardCustomer,
-        children: [
-          {
-            path: '',
-            component: PilihVendor
-          },
-          {
-            path: '/pilih-vendor',
-            component: PilihVendor
-          }
-        ]
-      }, 
-      */
+        component: PilihVendor,
+        name: 'pilih-vendor'
+      },
+      {
+        path: '/order/:id',
+        component: OrderForm,
+        name: 'order'
+      },
     ]
   })
 }

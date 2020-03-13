@@ -4,7 +4,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark nav-content fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand">
-                    <router-link to="/home" class="nav-link">
+                    <router-link to="/" class="nav-link">
                         <img src="../../assets/cetakkPutih.png" class="branded" alt="Logo Cetakk.id">
                     </router-link>
                     </a>
@@ -17,7 +17,7 @@
                         <a class="closer"><router-link to="" class="nav-link menus-expand text-light"><i class="fas fa-times-circle"></i></router-link></a>
                     </li>
                     <li class="nav-item">
-                        <a class="homepage"><router-link to="/home" class="rounded-pill nav-link menus-expand text-light">Halaman Utama</router-link></a>
+                        <a class="homepage"><router-link to="/" class="rounded-pill nav-link menus-expand text-light">Halaman Utama</router-link></a>
                     </li>
                     <li class="nav-item">
                         <a><router-link to="/cara" class="rounded-pill nav-link menus-expand text-light">Cara Kerja</router-link></a>
@@ -26,7 +26,9 @@
                         <a><router-link to="/tentang" class="rounded-pill nav-link menus-expand text-light">Tentang Kami</router-link></a>
                     </li>
                     <li class="nav-item">
-                        <a><router-link to="/dashboard-customer" class="rounded-pill btn btn-light nav-link menus-expand pr-5 pl-5">Mulai</router-link></a>
+                        <!-- <a><router-link to="/dashboard-customer" class="rounded-pill btn btn-light nav-link menus-expand pr-5 pl-5">Mulai</router-link></a> -->
+                        <!-- <a href="/login" class="rounded-pill btn btn-light nav-link menus-expand pr-5 pl-5">Login</a> -->
+                        <router-link to="/login" class="rounded-pill btn btn-light nav-link menus-expand pr-5 pl-5">Login</router-link>
                     </li>
                 </ul>
                 </div>
@@ -53,11 +55,10 @@
             <div class="col-xs-6 col-md-3">
               <h6>Navigasi</h6>
               <ul class="footer-links">
-                <li><a><router-link to="/home">Halaman Utama</router-link></a></li>
+                <li><a><router-link to="/">Halaman Utama</router-link></a></li>
                 <li><a><router-link to="/cara">Cara Kerja</router-link></a></li>
                 <li><a><router-link to="/tentang">Tentang Kami</router-link></a></li>
                 <li><a><router-link to="/dashboard-customer">Mulai Cetak</router-link></a></li>
-                            
               </ul>
             </div>
 
@@ -77,7 +78,7 @@
         <div class="footer-part ">
           <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by 
+              <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
                   <a href="https://cetakk.id">Cetakk.id Developer</a>.
               </p>
             </div>
@@ -85,33 +86,38 @@
         </div>
 		</footer>
     </div>
-    
+
 </template>
 
 <script>
 import JQuery from 'jquery'
+import axios from 'axios'
 //import '../../firebase'
 export default {
-  name: 'Based',
-    
-  mounted(){
-	let $ = JQuery
-    $('.navbar-nav>li>a').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
+    name: 'Based',
+    mounted(){
+        let $ = JQuery
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
 
-    $('.navbar-brand').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
+        $('.navbar-brand').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
 
-    $('.homepage').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
-	},
+        $('.homepage').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
+
+        console.log('mounted.')
+    }
 }
 </script>
 
 <style scoped>
+.based {
+  overflow: hidden;
+}
 .navbar-toggler-icon {
     width: 1em !important;
     height: 1em !important;
@@ -168,7 +174,7 @@ export default {
     .navbar-brand .nav-link{
         padding-top: 0 !important
     }
- 
+
     .nav-content{
         background: #0D7BE5;
         z-index: 200;

@@ -97,6 +97,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* eslint-disable */
 
@@ -645,23 +647,25 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "custom-file w-75 m-auto pb-3" }, [
-          _c(
-            "label",
-            { staticClass: "custom-file-label", attrs: { for: "file" } },
-            [_vm._v("Upload dokumen yang ingin dicetak (PDF)")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            ref: "file",
-            staticClass: "custom-file-input w-50 d-block",
-            attrs: { type: "file", id: "file", name: "file" },
-            on: {
-              change: function($event) {
-                return _vm.handleDocument()
+        _c("div", { staticClass: "form-group m-auto w-75 pb-3" }, [
+          _c("div", { staticClass: "custom-file" }, [
+            _c(
+              "label",
+              { staticClass: "custom-file-label", attrs: { for: "file" } },
+              [_vm._v("Upload dokumen yang ingin dicetak (PDF)")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              ref: "file",
+              staticClass: "custom-file-input w-50 d-block",
+              attrs: { type: "file", id: "file", name: "file" },
+              on: {
+                change: function($event) {
+                  return _vm.handleDocument()
+                }
               }
-            }
-          })
+            })
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "form-group w-75 m-auto pb-3 pt-3" }, [

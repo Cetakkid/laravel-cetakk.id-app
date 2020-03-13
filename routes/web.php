@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,6 @@ Route::get('/{any}', function () {
     return view('home');
 })->where('any', '.*');
 
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');

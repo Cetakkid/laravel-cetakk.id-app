@@ -50,9 +50,11 @@
 					<input type="text" class="form-control d-inline small-input" aria-describedby="timeHelp" placeholder="00" />
 				</div>
 			</div> -->
-			<div class="custom-file w-75 m-auto pb-3">
-				<label for="file" class="custom-file-label">Upload dokumen yang ingin dicetak (PDF)</label>
-				<input type="file" id="file" name="file" ref="file" class="custom-file-input w-50 d-block" @change="handleDocument()">
+			<div class="form-group m-auto w-75 pb-3">
+				<div class="custom-file">
+					<label for="file" class="custom-file-label">Upload dokumen yang ingin dicetak (PDF)</label>
+					<input type="file" id="file" name="file" ref="file" class="custom-file-input w-50 d-block" @change="handleDocument()">
+				</div>
 			</div>
 			<div class="form-group w-75 m-auto pb-3 pt-3">
 				<label for="catatan">Tambahkan catatan untuk vendor</label>

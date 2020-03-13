@@ -49,7 +49,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-5" }, [
+    return _c("div", { staticClass: "mt-5 py-5" }, [
       _c("div", { staticClass: "text-center m-2" }, [
         _c("h1", { staticClass: "d-block my-2" }, [_vm._v("Page Not Found")]),
         _vm._v(" "),

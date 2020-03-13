@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-5">
+    <div class="mt-5 py-5">
         <div class="text-center m-2">
             <h1 class="d-block my-2">Page Not Found</h1>
             <h2 class="d-block my-2">Sorry, the page you've search didn't exist</h2>

@@ -34,5 +34,5 @@ Vue.component('based', require('./components/layouter/Based.vue').default);
 const router = createRouter()
 new Vue({
     el: '#app',
-    router
+   router
 });

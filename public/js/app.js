@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"cara-print":"cara-print","order":"order","page-not-found":"page-not-found","pilih-vendor":"pilih-vendor","tentang-kami":"tentang-kami","vendors~home":"vendors~home","home":"home"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"cara-print":"cara-print","login":"login","order":"order","page-not-found":"page-not-found","pilih-vendor":"pilih-vendor","register":"register","tentang-kami":"tentang-kami","vendors~home":"vendors~home","home":"home"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -2058,6 +2058,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -2148,6 +2150,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
  //import '../../firebase'
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2163,6 +2167,7 @@ __webpack_require__.r(__webpack_exports__);
     $('.homepage').on('click', function () {
       $('.navbar-collapse').collapse('hide');
     });
+    console.log('mounted.');
   }
 });
 
@@ -6711,7 +6716,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.navbar-toggler-icon[data-v-5465ba66] {\n    width: 1em !important;\n    height: 1em !important;\n}\n.navbar-dark .navbar-toggler[data-v-5465ba66] {\n    color: rgba(255,255,255,.5);\n    border-color: transparent !important;\n    margin-top: -10px;\n}\n.nav-content[data-v-5465ba66]{\n    background: #0D7BE5;\n    z-index: 200;\n    height: 70px;\n    padding: 0 3rem 0 3rem;\n}\n.navbar-nav li[data-v-5465ba66]{\n    margin: 10px;\n}\n.branded[data-v-5465ba66]{\n    height: 40px;\n}\n.btn-light[data-v-5465ba66], .btn-light[data-v-5465ba66]:hover{\n    color: #0D7BE5 !important;\n    font-weight: 600 !important;\n}\n.nav-item[data-v-5465ba66]{\n    font-weight: 600 !important;\n}\n.nav-item[data-v-5465ba66]:hover, .nav-link[data-v-5465ba66]:hover{\n    /* transition: transform .2s !important;\n    transform: scale(1.01) !important; */\n    font-weight: 600 !important;\n}\n.homepage[data-v-5465ba66]{\n  display: none;\n}\n.closer[data-v-5465ba66]{\n    display: none;\n    border: none !important;\n}\n.closer .nav-link[data-v-5465ba66]{\n    border: none !important;\n    font-size: 40px;\n}\n@media (max-width: 850px){\n.branded[data-v-5465ba66]{\n        height: 20px;\n}\n.navbar-brand[data-v-5465ba66]{\n        padding-top: 0 !important\n}\n.navbar-brand .nav-link[data-v-5465ba66]{\n        padding-top: 0 !important\n}\n.nav-content[data-v-5465ba66]{\n        background: #0D7BE5;\n        z-index: 200;\n        height: 50px;\n        padding: 0 1rem 0 1rem;\n}\nbutton .navbar-toggler[data-v-5465ba66]{\n        padding-top: 0 !important;\n}\n.navbar-collapse[data-v-5465ba66]{\n        background-color: rgba(13, 125, 229, 0.945);\n        min-height: 100vh;\n        min-width: 100%;\n        position: absolute;\n        top: 0;\n        right: 0;\n        left: 0;\n        overflow: hidden;\n}\n.navbar-collapse .closer[data-v-5465ba66]{\n        padding: 100px 0 50px;\n        display: block;\n        color: azure;\n}\n.homepage[data-v-5465ba66]{\n      display: block;\n}\n.navbar-collapse .nav-item .nav-link[data-v-5465ba66]{\n        border: 2px solid #dddddd39;\n        border-radius: 10px;\n}\n.navbar-collapse .nav-item .nav-link[data-v-5465ba66]:hover{\n        border: 2px solid #ffd90139;\n        border-radius: 10px;\n}\n.menus-expand[data-v-5465ba66]{\n        background-color: transparent;\n        color: #fff !important;\n}\n}\n@media (max-width: 200px){\n.navbar-collapse[data-v-5465ba66]{\n        background-color: rgba(13, 125, 229, 0.945);\n        min-height: 100vh;\n        min-width: 100%;\n        position: absolute;\n        top: 0;\n        right: 0;\n        left: 0;\n        overflow: hidden;\n}\n.homepage[data-v-5465ba66]{\n      display: block;\n}\n.navbar-collapse .close[data-v-5465ba66]{\n        color: azure;\n        display: block !important;\n}\n.navbar-collapse .nav-item .nav-link[data-v-5465ba66]{\n        border: 2px solid #dddddd39;\n        border-radius: 10px;\n}\n.navbar-collapse .nav-item .nav-link[data-v-5465ba66]:hover{\n        border: 2px solid #ffd90139;\n        border-radius: 10px;\n}\n.menus-expand[data-v-5465ba66]{\n        background-color: transparent;\n}\n.nav-content[data-v-5465ba66]{\n      background: #0D7BE5;\n      z-index: 200;\n      height: 50px;\n      padding: 0 1rem 0 1rem;\n}\n}\n.site-footer[data-v-5465ba66]\n{\n  background-color:#26272b;\n  padding:45px 0 20px;\n  font-size:15px;\n  line-height:24px;\n  color:#737373;\n}\n.footer-part[data-v-5465ba66]{\n  padding: 0rem 5rem 0rem 5rem;\n}\n.footerCredit[data-v-5465ba66]{\n\twidth: 150px;\n\ttext-align: left\n}\n.img-tumbs[data-v-5465ba66]{\n    min-width: 35px;\n    max-width: 35px;\n\tmargin: 10px 10px 0 0;\n}\n.img-tumbs[data-v-5465ba66]:hover{\n    transition: transform .5s !important;\n\ttransform: scale(1.1) !important\n}\n.site-footer hr[data-v-5465ba66]\n{\n  border-top-color:#bbb;\n  opacity:0.5\n}\n.site-footer hr.small[data-v-5465ba66]\n{\n  margin:20px 0\n}\n.site-footer h6[data-v-5465ba66]\n{\n  color:#fff;\n  font-weight: 600;\n  margin-top:5px;\n}\n.site-footer a[data-v-5465ba66]\n{\n  color:#737373;\n}\n.site-footer a[data-v-5465ba66]:hover\n{\n  color:#3366cc;\n  text-decoration:none;\n}\n.footer-links[data-v-5465ba66]\n{\n  padding-left:0;\n  list-style:none\n}\n.footer-links li[data-v-5465ba66]\n{\n  display:block\n}\n.footer-links a[data-v-5465ba66]\n{\n  color:#737373\n}\n.footer-links a[data-v-5465ba66]:active,.footer-links a[data-v-5465ba66]:focus,.footer-links a[data-v-5465ba66]:hover\n{\n  color:#3366cc;\n  text-decoration:none;\n}\n.footer-links.inline li[data-v-5465ba66]\n{\n  display:inline-block\n}\n.site-footer .social-icons[data-v-5465ba66]\n{\n  text-align:right\n}\n.site-footer .social-icons a[data-v-5465ba66]\n{\n  width:40px;\n  height:40px;\n  line-height:40px;\n  margin-left:6px;\n  margin-right:0;\n  border-radius:100%;\n  background-color:#33353d\n}\n.copyright-text[data-v-5465ba66]\n{\n  margin:0\n}\n@media (max-width:991px)\n{\n.site-footer [class^=col-][data-v-5465ba66]\n  {\n    margin-bottom:30px\n}\n.footer-part[data-v-5465ba66]{\n    padding: 0rem 2rem 0rem 2rem;\n}\n}\n@media (max-width:767px)\n{\n.site-footer[data-v-5465ba66]\n  {\n    padding-bottom:0\n}\n.site-footer .copyright-text[data-v-5465ba66],.site-footer .social-icons[data-v-5465ba66]\n  {\n    text-align:center\n}\n}\n.social-icons[data-v-5465ba66]\n{\n  padding-left:0;\n  margin-bottom:0;\n  list-style:none\n}\n.social-icons li[data-v-5465ba66]\n{\n  display:inline-block;\n  margin-bottom:4px\n}\n.social-icons li.title[data-v-5465ba66]\n{\n  margin-right:15px;\n  text-transform:uppercase;\n  color:#96a2b2;\n  font-weight:700;\n  font-size:13px\n}\n.social-icons a[data-v-5465ba66]{\n  background-color:#eceeef;\n  color:#818a91;\n  font-size:16px;\n  display:inline-block;\n  line-height:44px;\n  width:44px;\n  height:44px;\n  text-align:center;\n  margin-right:8px;\n  border-radius:100%;\n  transition:all .2s linear\n}\n.social-icons a[data-v-5465ba66]:active,.social-icons a[data-v-5465ba66]:focus,.social-icons a[data-v-5465ba66]:hover\n{\n  color:#fff;\n  background-color:#29aafe\n}\n.social-icons.size-sm a[data-v-5465ba66]\n{\n  line-height:34px;\n  height:34px;\n  width:34px;\n  font-size:14px\n}\n.social-icons a.facebook[data-v-5465ba66]:hover\n{\n  background-color:#3b5998\n}\n.social-icons a.twitter[data-v-5465ba66]:hover\n{\n  background-color:#00aced\n}\n.social-icons a.linkedin[data-v-5465ba66]:hover\n{\n  background-color:#007bb6\n}\n.social-icons a.dribbble[data-v-5465ba66]:hover\n{\n  background-color:#ea4c89\n}\n@media (max-width:767px)\n{\n.social-icons li.title[data-v-5465ba66]\n  {\n    display:block;\n    margin-right:0;\n    font-weight:600\n}\n}\n", ""]);
+exports.push([module.i, "\n.based[data-v-5465ba66] {\n  overflow: hidden;\n}\n.navbar-toggler-icon[data-v-5465ba66] {\n    width: 1em !important;\n    height: 1em !important;\n}\n.navbar-dark .navbar-toggler[data-v-5465ba66] {\n    color: rgba(255,255,255,.5);\n    border-color: transparent !important;\n    margin-top: -10px;\n}\n.nav-content[data-v-5465ba66]{\n    background: #0D7BE5;\n    z-index: 200;\n    height: 70px;\n    padding: 0 3rem 0 3rem;\n}\n.navbar-nav li[data-v-5465ba66]{\n    margin: 10px;\n}\n.branded[data-v-5465ba66]{\n    height: 40px;\n}\n.btn-light[data-v-5465ba66], .btn-light[data-v-5465ba66]:hover{\n    color: #0D7BE5 !important;\n    font-weight: 600 !important;\n}\n.nav-item[data-v-5465ba66]{\n    font-weight: 600 !important;\n}\n.nav-item[data-v-5465ba66]:hover, .nav-link[data-v-5465ba66]:hover{\n    /* transition: transform .2s !important;\n    transform: scale(1.01) !important; */\n    font-weight: 600 !important;\n}\n.homepage[data-v-5465ba66]{\n  display: none;\n}\n.closer[data-v-5465ba66]{\n    display: none;\n    border: none !important;\n}\n.closer .nav-link[data-v-5465ba66]{\n    border: none !important;\n    font-size: 40px;\n}\n@media (max-width: 850px){\n.branded[data-v-5465ba66]{\n        height: 20px;\n}\n.navbar-brand[data-v-5465ba66]{\n        padding-top: 0 !important\n}\n.navbar-brand .nav-link[data-v-5465ba66]{\n        padding-top: 0 !important\n}\n.nav-content[data-v-5465ba66]{\n        background: #0D7BE5;\n        z-index: 200;\n        height: 50px;\n        padding: 0 1rem 0 1rem;\n}\nbutton .navbar-toggler[data-v-5465ba66]{\n        padding-top: 0 !important;\n}\n.navbar-collapse[data-v-5465ba66]{\n        background-color: rgba(13, 125, 229, 0.945);\n        min-height: 100vh;\n        min-width: 100%;\n        position: absolute;\n        top: 0;\n        right: 0;\n        left: 0;\n        overflow: hidden;\n}\n.navbar-collapse .closer[data-v-5465ba66]{\n        padding: 100px 0 50px;\n        display: block;\n        color: azure;\n}\n.homepage[data-v-5465ba66]{\n      display: block;\n}\n.navbar-collapse .nav-item .nav-link[data-v-5465ba66]{\n        border: 2px solid #dddddd39;\n        border-radius: 10px;\n}\n.navbar-collapse .nav-item .nav-link[data-v-5465ba66]:hover{\n        border: 2px solid #ffd90139;\n        border-radius: 10px;\n}\n.menus-expand[data-v-5465ba66]{\n        background-color: transparent;\n        color: #fff !important;\n}\n}\n@media (max-width: 200px){\n.navbar-collapse[data-v-5465ba66]{\n        background-color: rgba(13, 125, 229, 0.945);\n        min-height: 100vh;\n        min-width: 100%;\n        position: absolute;\n        top: 0;\n        right: 0;\n        left: 0;\n        overflow: hidden;\n}\n.homepage[data-v-5465ba66]{\n      display: block;\n}\n.navbar-collapse .close[data-v-5465ba66]{\n        color: azure;\n        display: block !important;\n}\n.navbar-collapse .nav-item .nav-link[data-v-5465ba66]{\n        border: 2px solid #dddddd39;\n        border-radius: 10px;\n}\n.navbar-collapse .nav-item .nav-link[data-v-5465ba66]:hover{\n        border: 2px solid #ffd90139;\n        border-radius: 10px;\n}\n.menus-expand[data-v-5465ba66]{\n        background-color: transparent;\n}\n.nav-content[data-v-5465ba66]{\n      background: #0D7BE5;\n      z-index: 200;\n      height: 50px;\n      padding: 0 1rem 0 1rem;\n}\n}\n.site-footer[data-v-5465ba66]\n{\n  background-color:#26272b;\n  padding:45px 0 20px;\n  font-size:15px;\n  line-height:24px;\n  color:#737373;\n}\n.footer-part[data-v-5465ba66]{\n  padding: 0rem 5rem 0rem 5rem;\n}\n.footerCredit[data-v-5465ba66]{\n\twidth: 150px;\n\ttext-align: left\n}\n.img-tumbs[data-v-5465ba66]{\n    min-width: 35px;\n    max-width: 35px;\n\tmargin: 10px 10px 0 0;\n}\n.img-tumbs[data-v-5465ba66]:hover{\n    transition: transform .5s !important;\n\ttransform: scale(1.1) !important\n}\n.site-footer hr[data-v-5465ba66]\n{\n  border-top-color:#bbb;\n  opacity:0.5\n}\n.site-footer hr.small[data-v-5465ba66]\n{\n  margin:20px 0\n}\n.site-footer h6[data-v-5465ba66]\n{\n  color:#fff;\n  font-weight: 600;\n  margin-top:5px;\n}\n.site-footer a[data-v-5465ba66]\n{\n  color:#737373;\n}\n.site-footer a[data-v-5465ba66]:hover\n{\n  color:#3366cc;\n  text-decoration:none;\n}\n.footer-links[data-v-5465ba66]\n{\n  padding-left:0;\n  list-style:none\n}\n.footer-links li[data-v-5465ba66]\n{\n  display:block\n}\n.footer-links a[data-v-5465ba66]\n{\n  color:#737373\n}\n.footer-links a[data-v-5465ba66]:active,.footer-links a[data-v-5465ba66]:focus,.footer-links a[data-v-5465ba66]:hover\n{\n  color:#3366cc;\n  text-decoration:none;\n}\n.footer-links.inline li[data-v-5465ba66]\n{\n  display:inline-block\n}\n.site-footer .social-icons[data-v-5465ba66]\n{\n  text-align:right\n}\n.site-footer .social-icons a[data-v-5465ba66]\n{\n  width:40px;\n  height:40px;\n  line-height:40px;\n  margin-left:6px;\n  margin-right:0;\n  border-radius:100%;\n  background-color:#33353d\n}\n.copyright-text[data-v-5465ba66]\n{\n  margin:0\n}\n@media (max-width:991px)\n{\n.site-footer [class^=col-][data-v-5465ba66]\n  {\n    margin-bottom:30px\n}\n.footer-part[data-v-5465ba66]{\n    padding: 0rem 2rem 0rem 2rem;\n}\n}\n@media (max-width:767px)\n{\n.site-footer[data-v-5465ba66]\n  {\n    padding-bottom:0\n}\n.site-footer .copyright-text[data-v-5465ba66],.site-footer .social-icons[data-v-5465ba66]\n  {\n    text-align:center\n}\n}\n.social-icons[data-v-5465ba66]\n{\n  padding-left:0;\n  margin-bottom:0;\n  list-style:none\n}\n.social-icons li[data-v-5465ba66]\n{\n  display:inline-block;\n  margin-bottom:4px\n}\n.social-icons li.title[data-v-5465ba66]\n{\n  margin-right:15px;\n  text-transform:uppercase;\n  color:#96a2b2;\n  font-weight:700;\n  font-size:13px\n}\n.social-icons a[data-v-5465ba66]{\n  background-color:#eceeef;\n  color:#818a91;\n  font-size:16px;\n  display:inline-block;\n  line-height:44px;\n  width:44px;\n  height:44px;\n  text-align:center;\n  margin-right:8px;\n  border-radius:100%;\n  transition:all .2s linear\n}\n.social-icons a[data-v-5465ba66]:active,.social-icons a[data-v-5465ba66]:focus,.social-icons a[data-v-5465ba66]:hover\n{\n  color:#fff;\n  background-color:#29aafe\n}\n.social-icons.size-sm a[data-v-5465ba66]\n{\n  line-height:34px;\n  height:34px;\n  width:34px;\n  font-size:14px\n}\n.social-icons a.facebook[data-v-5465ba66]:hover\n{\n  background-color:#3b5998\n}\n.social-icons a.twitter[data-v-5465ba66]:hover\n{\n  background-color:#00aced\n}\n.social-icons a.linkedin[data-v-5465ba66]:hover\n{\n  background-color:#007bb6\n}\n.social-icons a.dribbble[data-v-5465ba66]:hover\n{\n  background-color:#ea4c89\n}\n@media (max-width:767px)\n{\n.social-icons li.title[data-v-5465ba66]\n  {\n    display:block;\n    margin-right:0;\n    font-weight:600\n}\n}\n", ""]);
 
 // exports
 
@@ -38246,7 +38251,7 @@ var render = function() {
               [
                 _c(
                   "router-link",
-                  { staticClass: "nav-link", attrs: { to: "/home" } },
+                  { staticClass: "nav-link", attrs: { to: "/" } },
                   [
                     _c("img", {
                       staticClass: "branded",
@@ -38299,7 +38304,7 @@ var render = function() {
                           {
                             staticClass:
                               "rounded-pill nav-link menus-expand text-light",
-                            attrs: { to: "/home" }
+                            attrs: { to: "/" }
                           },
                           [_vm._v("Halaman Utama")]
                         )
@@ -38344,23 +38349,22 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c("li", { staticClass: "nav-item" }, [
-                    _c(
-                      "a",
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass:
-                              "rounded-pill btn btn-light nav-link menus-expand pr-5 pl-5",
-                            attrs: { to: "/dashboard-customer" }
-                          },
-                          [_vm._v("Mulai")]
-                        )
-                      ],
-                      1
-                    )
-                  ])
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass:
+                            "rounded-pill btn btn-light nav-link menus-expand pr-5 pl-5",
+                          attrs: { to: "/login" }
+                        },
+                        [_vm._v("Login")]
+                      )
+                    ],
+                    1
+                  )
                 ])
               ]
             )
@@ -38384,7 +38388,7 @@ var render = function() {
                 _c(
                   "a",
                   [
-                    _c("router-link", { attrs: { to: "/home" } }, [
+                    _c("router-link", { attrs: { to: "/" } }, [
                       _vm._v("Halaman Utama")
                     ])
                   ],
@@ -38541,7 +38545,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "col-md-8 col-sm-6 col-xs-12" }, [
           _c("p", { staticClass: "copyright-text" }, [
             _vm._v(
-              "Copyright © 2019 All Rights Reserved by \n                  "
+              "Copyright © 2020 All Rights Reserved by\n                  "
             ),
             _c("a", { attrs: { href: "https://cetakk.id" } }, [
               _vm._v("Cetakk.id Developer")
@@ -53991,6 +53995,14 @@ var OrderForm = function OrderForm() {
   return __webpack_require__.e(/*! import() | order */ "order").then(__webpack_require__.bind(null, /*! ../components/customer/OrderForm.vue */ "./resources/js/components/customer/OrderForm.vue"));
 };
 
+var Login = function Login() {
+  return __webpack_require__.e(/*! import() | login */ "login").then(__webpack_require__.bind(null, /*! ../components/auth/Login.vue */ "./resources/js/components/auth/Login.vue"));
+};
+
+var Register = function Register() {
+  return __webpack_require__.e(/*! import() | register */ "register").then(__webpack_require__.bind(null, /*! ../components/auth/Register.vue */ "./resources/js/components/auth/Register.vue"));
+};
+
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 function createRouter() {
   return new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
@@ -54004,52 +54016,33 @@ function createRouter() {
       name: 'page-not-found'
     }, {
       path: '/',
-      name: 'based',
-      component: Based,
-      children: [{
-        path: '',
-        component: Home,
-        name: 'home'
-      }, {
-        path: '/home',
-        component: Home,
-        name: 'home'
-      }, {
-        path: '/tentang',
-        component: TentangKami,
-        name: 'tentang-kami'
-      }, {
-        path: '/cara',
-        component: CaraPrint,
-        name: 'cara-print'
-      }, {
-        path: '/dashboard-customer',
-        component: PilihVendor,
-        name: 'pilih-vendor'
-      }, {
-        path: '/order/:id',
-        component: OrderForm,
-        name: 'order'
-      }]
-    }
-    /*
-    {
+      component: Home,
+      name: 'home'
+    }, {
+      path: '/login',
+      component: Login,
+      name: 'login'
+    }, {
+      path: '/register',
+      component: Register,
+      name: 'register'
+    }, {
+      path: '/tentang',
+      component: TentangKami,
+      name: 'tentang-kami'
+    }, {
+      path: '/cara',
+      component: CaraPrint,
+      name: 'cara-print'
+    }, {
       path: '/dashboard-customer',
-      name: 'DashboardCustomer',
-      component: DashboardCustomer,
-      children: [
-        {
-          path: '',
-          component: PilihVendor
-        },
-        {
-          path: '/pilih-vendor',
-          component: PilihVendor
-        }
-      ]
-    }, 
-    */
-    ]
+      component: PilihVendor,
+      name: 'pilih-vendor'
+    }, {
+      path: '/order/:id',
+      component: OrderForm,
+      name: 'order'
+    }]
   });
 }
 
