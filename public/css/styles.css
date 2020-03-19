@@ -1,117 +1,12 @@
-<template>
-    <div class="based">
-        <div class="header">
-            <nav class="navbar navbar-expand-lg navbar-dark nav-content fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand">
-                    <router-link to="/home" class="nav-link">
-                        <img src="../../assets/cetakkPutih.png" class="branded" alt="Logo Cetakk.id">
-                    </router-link>
-                    </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="closer"><router-link to="" class="nav-link menus-expand text-light"><i class="fas fa-times-circle"></i></router-link></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="homepage"><router-link to="/home" class="rounded-pill nav-link menus-expand text-light">Halaman Utama</router-link></a>
-                    </li>
-                    <li class="nav-item">
-                        <a><router-link to="/cara" class="rounded-pill nav-link menus-expand text-light">Cara Kerja</router-link></a>
-                    </li>
-                    <li class="nav-item">
-                        <a><router-link to="/tentang" class="rounded-pill nav-link menus-expand text-light">Tentang Kami</router-link></a>
-                    </li>
-                    <li class="nav-item">
-                        <a><router-link to="/dashboard-customer" class="rounded-pill btn btn-light nav-link menus-expand pr-5 pl-5">Mulai</router-link></a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-            </nav>
-        </div>
-
-        <div class="content">
-            <router-view></router-view>
-        </div>
-
-        <footer class="site-footer text-left">
-            <div class="footer-part text-left">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                    <img src="../../assets/img/LogoteksPutih.png" alt="" class="mb-3 footerCredit">
-                    <h6>Hubungi Kami</h6>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-home mr-2"></i> <a href="">Jl.Kaliurang, Km.14, Umbulmartani, Ngemplak, Sleman</a></li>
-                        <li><i class="fas fa-phone mr-2"></i> <a href="">9103124891</a></li>
-                    </ul>
-                    </div>
-
-                    <div class="col-xs-6 col-md-3">
-                    <h6>Navigasi</h6>
-                    <ul class="footer-links">
-                        <li><a><router-link to="/home">Halaman Utama</router-link></a></li>
-                        <li><a><router-link to="/cara">Cara Kerja</router-link></a></li>
-                        <li><a><router-link to="/tentang">Tentang Kami</router-link></a></li>
-                        <li><a><router-link to="/dashboard-customer">Mulai Cetak</router-link></a></li>
-
-                    </ul>
-                    </div>
-
-                    <div class="col-xs-6 col-md-3">
-                    <h6>Ikuti Kami</h6>
-                    <ul class="footer-links">
-                        <li>
-                            <a href="https://www.instagram.com/cetakkid.official/"><img class="img-tumbs" src="../../assets/img/instagramwhite.svg" alt=""></a>
-                            <a href="https://www.linkedin.com/company/cetakk-id/"><img class="img-tumbs" src="../../assets/img/linkedinwhite.svg" alt=""></a>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-                <hr>
-                </div>
-
-                <div class="footer-part ">
-                <div class="row">
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by
-                        <a href="https://cetakk.id">Cetakk.id Developer</a>.
-                    </p>
-                    </div>
-                </div>
-            </div>
-		</footer>
-    </div>
-
-</template>
-
-<script>
-import JQuery from 'jquery'
-//import '../../firebase'
-export default {
-  name: 'Based',
-
-  mounted(){
-	let $ = JQuery
-    $('.navbar-nav>li>a').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
-
-    $('.navbar-brand').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
-
-    $('.homepage').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
-	},
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
 }
-</script>
 
-<style scoped>
 .navbar-toggler-icon {
     width: 1em !important;
     height: 1em !important;
@@ -435,6 +330,269 @@ export default {
     font-weight:600
   }
 }
-</style>
 
 
+/* home */
+.font-hero{
+    font-weight: 700 !important;
+    font-size: 50px;
+}
+strong{
+	font-weight: 700 !important
+}
+.font-subhero{
+    font-weight: 900 !important;
+    font-size: 25px;
+}
+.font-title{
+    font-size: 30px;
+}
+.text-desc{
+	font-size: 12px;
+}
+.text-slider-items{
+	display: none
+}
+.font-secondary{
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffc502
+}
+.font-primary{
+    font-size: 14px;
+}
+
+.hero {
+    /* background:url('../../assets/img/vectorBg.png') no-repeat center; */
+    background-size: cover;
+    min-height: 50rem;
+	background-color: #0D7BE5;
+	/* background-position-y: -10vh; */
+	padding: 11em 5em 0 5em;
+}
+.hero-part{
+	animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-paid img{
+	width: 100%;
+}
+
+.home-image{
+    min-width: 70%
+}
+
+.use-part {
+    background:url('../../assets/img/bg-usefull.svg') no-repeat center;
+    background-size: cover;
+    height: 40rem;
+	background-color: #ffffff;
+	padding: 100px 5rem 0 5rem;
+	background-position-y: -20rem;
+}
+.use-part-title{
+	margin-bottom: 30px;
+}
+
+.cardList{
+	margin-bottom: 150px;
+}
+.carder{
+	padding: 0 30px 0 30px;
+}
+
+.ease{
+	height: 40rem;
+	padding: 50px 5rem 0 5rem;
+}
+.ease-title{
+	height: 5rem;
+}
+.ease img{
+	width: 80%;
+}
+.btn-start{
+	margin-top: 20px;
+}
+
+hr{
+	height: 5px;
+	width: 100px;
+	background: #F4BE0B;
+	border-radius: 50px;
+}
+
+.btn-outline-warning{
+	border: 2px solid #F4BE0B;
+}
+
+.text-white{
+	color: #fff !important;
+}
+
+.text-white:hover{
+	color: #222 !important;
+}
+
+.gmbr{
+	min-height: 150px;
+	max-height: 150px;
+	max-width: 100%;
+	padding: 20px
+}
+
+.card{
+	background-color: #0D7BE5;
+	border-radius: 10px;
+	min-height: 310px;
+}
+.card:hover{
+	transition: transform .6s !important;
+	transform: scale(1.01) !important;
+}
+
+.font-smaller:hover{
+    color: #F4BE0B !important;
+    text-decoration: none;
+    transform: scale(1.02) !important;
+}
+
+.footer{
+    background: url('../../assets/img/footer.svg') no-repeat center;
+    background-size: cover;
+    min-height: 30rem;
+	background-position-y: 10px;
+}
+.part-foot{
+    padding-top: 200px;
+}
+
+
+@media (max-width: 900px) {
+	.font-hero{
+		font-weight: 700;
+		font-size: 30px;
+	}
+	.font-title{
+		font-size: 20px;
+	}
+	.hero {
+		min-height: 30rem;
+		background-color: #0D7BE5;
+		padding: 5em 0 0 0;
+}
+	.hero-part{
+    	padding: 30px;
+	}
+	.hero-paid{
+		display: none;
+	}
+	.use-part {
+		height: 90rem;
+		padding: 30px 0rem 0 0rem;
+		background-position-y: 0rem;
+	}
+	.use-part-title{
+		margin-bottom: 0px;
+	}
+
+	.cardList{
+		margin-bottom: 150px;
+	}
+	.carder{
+		padding: 0 50px 0 50px;
+	}
+
+	.ease{
+		height: 25rem;
+		padding: 1rem;
+		margin-bottom: 5rem;
+	}
+	.ease-title{
+		height: 5rem;
+	}
+	.ease img{
+		display: none;
+	}
+
+	hr{
+		height: 5px;
+		width: 100px;
+		background: #F4BE0B;
+		border-radius: 50px;
+	}
+
+	.btn-outline-warning{
+		border: 2px solid #F4BE0B;
+	}
+
+	.text-white{
+		color: #fff !important;
+	}
+
+	.text-white:hover{
+		color: #222 !important;
+	}
+
+
+	.card{
+		background-color: #0D7BE5;
+		border-radius: 10px;
+		min-height: 50px;
+	}
+
+	.card:hover{
+		transition: transform .6s !important;
+		transform: scale(1.01) !important;
+	}
+
+	.font-smaller:hover{
+		color: #F4BE0B !important;
+		text-decoration: none;
+		transform: scale(1.02) !important;
+	}
+	.footer{
+		background-size: cover;
+		min-height: 20rem;
+	}
+	.part-foot{
+    	padding-top: 100px;
+	}
+
+}

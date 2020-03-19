@@ -53691,8 +53691,8 @@ Vue.component('based', __webpack_require__(/*! ./components/layouter/Based.vue *
 
 var router = Object(_router__WEBPACK_IMPORTED_MODULE_0__["createRouter"])();
 new Vue({
-  el: '#app',
-  router: router
+  el: '#app' //router
+
 });
 
 /***/ }),

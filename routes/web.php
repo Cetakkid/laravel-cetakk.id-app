@@ -13,10 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}', function () {
-    return view('home');
-})->where('any', '.*');
+// Route::get('/{any}', function () {
+//     return view('home');
+// })->where('any', '.*');
+Route::get('/', function () {
+    return view('contents.main');
+});
 
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('vendors', 'VendorController');
