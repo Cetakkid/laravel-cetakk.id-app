@@ -1,9 +1,6 @@
 @extends('layouts.welcome')
 
 <style>
-    * {
-        color: #000;
-    }
     .create-vendor {
         margin-top: 100px;
         margin-bottom: 48px;
@@ -57,6 +54,10 @@
         <div class="form-group">
             <label for="phone_number">Nomor Hp</label>
             <input type="text" class="form-control" name="phone_number">
+        </div>
+        <div class="custom-file mt-3 mb-3">
+            <input type="file" name="image" class="custom-file-input" id="image">
+            <label class="custom-file-label" for="image">Pilih Foto Vendor</label>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

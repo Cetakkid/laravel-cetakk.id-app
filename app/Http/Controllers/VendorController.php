@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Vendor;
+use Image;
 use Illuminate\Http\Request;
 
 class VendorController extends Controller
@@ -39,7 +40,8 @@ class VendorController extends Controller
         $request->validate([
             'owner_first_name' => 'required',
             'owner_last_name' => 'required',
-            'email' => 'required'
+            'email' => 'required',
+            'image' => 'required|image|max:2048'
         ]);
 
         $vendor = new Vendor([
@@ -50,11 +52,33 @@ class VendorController extends Controller
             'location' => $request->get('location'),
             'openTime' => $request->get('openTime'),
             'closeTime' => $request->get('closeTime'),
-            'phone_number' => $request->get('phone_number')
+            'phone_number' => $request->get('phone_number'),
+            'image' => $request->get('image')
         ]);
+
+        $image_file = $request->user_image;
+
+        $image = Image::make($image_file);
+
+        Response::make($image->encode('jpeg'));
+
+        Images::create($form_data);
 
         $vendor -> save();
         return redirect('/')->with('success', 'Vendor saved!');
+    }
+
+    function fetch_image($image_id)
+    {
+        $image = Images::findOrFail($image_id);
+
+        $image_file = Image::make($image->user_image);
+
+        $response = Response::make($image_file->encode('jpeg'));
+
+        $response->header('Content-Type', 'image/jpeg');
+
+        return $response;
     }
 
     /**

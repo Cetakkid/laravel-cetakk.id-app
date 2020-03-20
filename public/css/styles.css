@@ -1,7 +1,7 @@
 html, body {
     background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
+    /* color: #636b6f; */
+    font-family: "Open Sans", "Roboto", sans-serif;
     font-weight: 200;
     height: 100vh;
     margin: 0;
@@ -478,7 +478,6 @@ hr{
 }
 
 .card{
-	background-color: #0D7BE5;
 	border-radius: 10px;
 	min-height: 310px;
 }
@@ -572,7 +571,6 @@ hr{
 
 
 	.card{
-		background-color: #0D7BE5;
 		border-radius: 10px;
 		min-height: 50px;
 	}
