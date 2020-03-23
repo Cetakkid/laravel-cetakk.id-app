@@ -13,10 +13,16 @@ class VendorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Vendor');
+    }
+
     public function index()
     {
         $vendors = Vendor::all();
-        return view('contents.list_vendors', compact('vendors'));
+        return view('vendors.list_vendors', compact('vendors'));
     }
 
     /**
@@ -26,7 +32,7 @@ class VendorController extends Controller
      */
     public function create()
     {
-        return view('contents.create_vendor');
+        return view('vendors.create_vendor');
     }
 
     /**
@@ -45,15 +51,15 @@ class VendorController extends Controller
         ]);
 
         $vendor = new Vendor([
-            'owner_first_name' => $request->get('owner_first_name'),
-            'owner_last_name' => $request->get('owner_last_name'),
-            'email' => $request->get('email'),
-            'name' => $request->get('name'),
-            'location' => $request->get('location'),
-            'openTime' => $request->get('openTime'),
-            'closeTime' => $request->get('closeTime'),
-            'phone_number' => $request->get('phone_number'),
-            'image' => $request->get('image')
+            'owner_first_name' => $request->post('owner_first_name'),
+            'owner_last_name' => $request->post('owner_last_name'),
+            'email' => $request->post('email'),
+            'name' => $request->post('name'),
+            'location' => $request->post('location'),
+            'openTime' => $request->post('openTime'),
+            'closeTime' => $request->post('closeTime'),
+            'phone_number' => $request->post('phone_number'),
+            'image' => $request->post('image')
         ]);
 
         $image_file = $request->user_image;

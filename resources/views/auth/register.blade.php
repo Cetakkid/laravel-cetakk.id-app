@@ -40,6 +40,16 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="roles" class="col-md-4 col-form-label text-md-right">Daftar Sebagai</label>
+                            <div class="col-md-6">
+                                <select class="form-control @error('roles') is-invalid @enderror" name="roles" value="{{ old('roles') }}" required autocomplete="roles" autofocus id="roles">
+                                    <option>Customer</option>
+                                    <option>Vendor</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

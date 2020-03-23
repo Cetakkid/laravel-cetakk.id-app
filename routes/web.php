@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 // use Illuminate\Support\Facades\Auth;
 /*
@@ -24,3 +25,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('vendors', 'VendorController');
+Route::get('/order/create', 'OrderController@create')->name('order.create');
+Route::post('/order', 'OrderController@store')->name('order.store');
+Route::get('/dashboard-customer', 'CustomerController@index')->name('customer.index');
