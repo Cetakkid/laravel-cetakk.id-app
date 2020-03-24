@@ -18,10 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark nav-content fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Cetakk.id') }}
@@ -72,7 +73,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="my-5 py-5">
             @yield('content')
         </main>
     </div>

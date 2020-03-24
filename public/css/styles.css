@@ -52,6 +52,36 @@ html, body {
     border: none !important;
     font-size: 40px;
 }
+.sidebar {
+    width: 200px;
+    margin: 0;
+    padding-top: 48px;
+    position: fixed;
+    background-color: #031e68;
+    height: 100%;
+    overflow: hidden;
+}
+.sidebar a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+.sidebar a:hover {
+    background-color: #737373;
+    color: white;
+}
+.sidebar a:active {
+    background-color: #737373;
+    color: white;
+}
+.dashboard-content {
+    margin-left: 200px;
+}
+footer{
+    position: absolute;
+    width: 100%;
+}
 @media (max-width: 850px){
     .branded{
         height: 20px;

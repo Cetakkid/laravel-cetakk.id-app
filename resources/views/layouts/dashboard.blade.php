@@ -51,17 +51,8 @@
                                 <a href="{{ route('login') }}" class="homepage rounded-pill nav-link menus-expand text-light">{{ __('Login') }}</a>
                             </li>
                         @endauth
-                        <li class="nav-item">
-                            <a href="/cara-kerja" class="rounded-pill nav-link menus-expand text-light">Cara Kerja</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/tentang" class="rounded-pill nav-link menus-expand text-light">Tentang Kami</a>
-                        </li>
-                        @auth
-                            {{-- <li class="nav-item">
-                                <a href="/" class="rounded-pill btn btn-light nav-link menus-expand pr-5 pl-5">Mulai</a>
-                            </li> --}}
 
+                        @auth
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="far fa-user mr-2"></i>{{ Auth::user()->name }}<span class="caret"></span>
@@ -69,16 +60,16 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @if (Auth::user()->roles[0]->pivot->role_id == 1)
-                                <a class="dropdown-item" href="{{ route('customer.index') }}">Dashboard Customer</a>
-                                        <a class="dropdown-item" href=""><i class="fas fa-print mr-2"></i>Cetakk Sekarang</a>
+                                        <a class="dropdown-item" href="">Dashboard Customer</a>
+                                        <a class="dropdown-item" href="">Cetakk Sekarang</a>
                                     @else
-                                        <a class="dropdown-item" href=""><i class="fas fa-columns mr-2"></i>Dashboard Vendor</a>
+                                        <a class="dropdown-item" href="">Dashboard Vendor</a>
                                     @endif
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        <i class="fas fa-sign-out-alt mr-2"></i>{{ __('Logout') }}
+                                        {{ __('Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -98,7 +89,17 @@
             </nav>
         </div>
 
-        <div class="content">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarResponsive" aria-controls="sidebarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="sidebar" id="sidebarResponsive">
+            <a href=""><i class="fas fa-print mr-2"></i>Cetak Sekarang</a>
+            <a href=""><i class="fas fa-history mr-2"></i>Riwayat Cetak</a>
+            <a href=""><i class="far fa-user mr-2"></i>Profile</a>
+        </div>
+
+        <div class="dashboard-content">
             @yield('content')
         </div>
 
