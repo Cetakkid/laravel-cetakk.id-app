@@ -46,6 +46,15 @@
                             <li class="nav-item">
                                 <a href="/" class="homepage rounded-pill nav-link menus-expand text-light">Halaman Utama</a>
                             </li>
+                            <li class="nav-item nav-mobile">
+                                <a href="" class="nav-link menus-expand text-light"><i class="fas fa-print mr-2"></i>Cetak Sekarang</a>
+                            </li>
+                            <li class="nav-item nav-mobile">
+                                <a href="" class="nav-link menus-expand text-light"><i class="far fa-user mr-2"></i>Profile</a>
+                            </li>
+                            <li class="nav-item nav-mobile">
+                                <a href="" class="nav-link menus-expand text-light"><i class="fas fa-history mr-2"></i>Riwayat Cetak</a>
+                            </li>
                         @else
                             <li class="nav-item">
                                 <a href="{{ route('login') }}" class="homepage rounded-pill nav-link menus-expand text-light">{{ __('Login') }}</a>
@@ -89,14 +98,12 @@
             </nav>
         </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarResponsive" aria-controls="sidebarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="sidebar" id="sidebarResponsive">
-            <a href=""><i class="fas fa-print mr-2"></i>Cetak Sekarang</a>
-            <a href=""><i class="fas fa-history mr-2"></i>Riwayat Cetak</a>
-            <a href=""><i class="far fa-user mr-2"></i>Profile</a>
+        <div class="sidebar">
+            <div class="mt-md-5">
+                <a href=""><i class="fas fa-print mr-2"></i>Cetak Sekarang</a>
+                <a href=""><i class="fas fa-history mr-2"></i>Riwayat Cetak</a>
+                <a href=""><i class="far fa-user mr-2"></i>Profile</a>
+            </div>
         </div>
 
         <div class="dashboard-content">
@@ -154,16 +161,18 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script>
-            $('.navbar-nav>li>a').on('click', function(){
-                $('.navbar-collapse').collapse('hide');
-            });
+            $(document).ready(function(){
+                $('.navbar-nav>li>a').on('click', function(){
+                    $('.navbar-collapse').collapse('hide');
+                });
 
-            $('.navbar-brand').on('click', function(){
-                $('.navbar-collapse').collapse('hide');
-            });
+                $('.navbar-brand').on('click', function(){
+                    $('.navbar-collapse').collapse('hide');
+                });
 
-            $('.homepage').on('click', function(){
-                $('.navbar-collapse').collapse('hide');
+                $('.homepage').on('click', function(){
+                    $('.navbar-collapse').collapse('hide');
+                });
             });
         </script>
     </body>

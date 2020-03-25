@@ -41,6 +41,9 @@ html, body {
     transform: scale(1.01) !important; */
     font-weight: 600 !important;
 }
+.nav-mobile {
+    display: none;
+}
 .homepage{
   display: none;
 }
@@ -57,7 +60,8 @@ html, body {
     margin: 0;
     padding-top: 48px;
     position: fixed;
-    background-color: #031e68;
+    /* background-color: #031e68; */
+    background-color: #17599B;
     height: 100%;
     overflow: hidden;
 }
@@ -69,14 +73,20 @@ html, body {
 }
 .sidebar a:hover {
     background-color: #737373;
-    color: white;
+    color: #fff;
 }
 .sidebar a:active {
     background-color: #737373;
-    color: white;
+    color: #fff;
 }
 .dashboard-content {
     margin-left: 200px;
+}
+.open-toggler {
+    background-color: transparent;
+    color: #fff;
+    margin: 10px;
+    border: 0px;
 }
 footer{
     position: absolute;
@@ -174,6 +184,25 @@ footer{
       z-index: 200;
       height: 50px;
       padding: 0 1rem 0 1rem;
+    }
+    .nav-mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 400px){
+    .sidebar {
+        display: none;
+    }
+    .sidebar a {
+        display: none;
+    }
+    .dashboard-content{
+        margin-left: 0;
+        width: 100%;
+    }
+    .nav-mobile {
+        display: block;
     }
 }
 

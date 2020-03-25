@@ -1,4 +1,4 @@
-@extends('layouts.welcome')
+@extends('layouts.dashboard_vendors')
 <style>
 .pilihVendor{
     padding-top: 10vh;
