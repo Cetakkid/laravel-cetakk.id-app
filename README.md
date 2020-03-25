@@ -5,6 +5,7 @@ Cetakk.id is digital printing platform to facilitate customers and vendors of di
 ## How to run locally
 
 - Clone this repo git@github.com:Cetakkid/laravel-cetakk.id-app.git
+- Run ```php artisan migrate```
 - Run ```npm run install && npm run dev```
 - Run ```php artisan serve``` and open browser, go to localhost:8000
 
