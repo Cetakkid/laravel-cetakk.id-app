@@ -1,4 +1,4 @@
-@extends('layouts.dashboard_vendors')
+@extends('layouts.welcome')
 <style>
 .pilihVendor{
     padding-top: 10vh;
@@ -59,9 +59,9 @@
                 </div>
 
                 <div class="card-footer p-2">
-                    <form action="{{ route('vendors.show', $vendor->id) }}" method="GET">
+                    <form action="{{ route('order.create') }}" method="GET">
                         @csrf
-                        <button class="btn btn-primary btn-sm mr-2" type="submit">Cetakk</button>
+                        <button class="btn btn-primary btn-sm mr-2" type="submit">Cetak</button>
                     </form>
                     <button class="btn btn-warning btn-sm text-light linked" data-toggle="modal" data-target="#pesan">Cek Harga</button>
                 </div>

@@ -69,10 +69,10 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @if (Auth::user()->roles[0]->pivot->role_id == 1)
-                                        <a class="dropdown-item" href="{{ route('customer.index') }}"><i class="fas fa-columns mr-2"></i>Dashboard Customer</a>
+                                <a class="dropdown-item" href="{{ route('customer.index') }}"><i class="fas fa-columns mr-2"></i>Dashboard Customer</a>
                                         <a class="dropdown-item" href=""><i class="fas fa-print mr-2"></i>Cetakk Sekarang</a>
                                     @else
-                                        <a class="dropdown-item" href="{{ route('vendor.index') }}"><i class="fas fa-columns mr-2"></i>Dashboard Vendor</a>
+                                        <a class="dropdown-item" href=""><i class="fas fa-columns mr-2"></i>Dashboard Vendor</a>
                                     @endif
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -153,18 +153,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script>
-            $(document).ready(function(){
-                $('.navbar-nav>li>a').on('click', function(){
-                    $('.navbar-collapse').collapse('hide');
-                });
+            $('.navbar-nav>li>a').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
 
-                $('.navbar-brand').on('click', function(){
-                    $('.navbar-collapse').collapse('hide');
-                });
+            $('.navbar-brand').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
 
-                $('.homepage').on('click', function(){
-                    $('.navbar-collapse').collapse('hide');
-                });
+            $('.homepage').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
             });
         </script>
     </body>

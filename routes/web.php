@@ -28,6 +28,5 @@ Route::resource('vendors', 'VendorController');
 Route::get('/order/create', 'OrderController@create')->name('order.create');
 Route::post('/order', 'OrderController@store')->name('order.store');
 Route::get('/dashboard-customer', 'CustomerController@index')->name('customer.index');
-Route::get('/dashboard-vendor', 'VendorController@index')->name('vendor.index');
 Route::view('/cara-kerja', 'contents.carakerja');
 Route::view('/tentang', 'contents.tentang');

@@ -18,36 +18,26 @@ class OrderController extends Controller
             'jenis_kertas' => 'required',
             'jilid' => 'required',
             'jasa_antar' => 'required',
-            'file' => 'required|file',
+            'file' => 'required',
             'takenTime' => 'required',
             'notes' => 'required',
             'agreement' => 'required'
         ]);
 
-        //$request->file('file')->getClientOriginalName();
-
-        // $fileName = "fileName".time().'.'.request()->file->getClientOriginalExtension();
-        // $path = $request->file->storeAs('files', $fileName);
-        // dd($path);
-        //Order::create([$request->all(), $request->file('file')->getClientOriginalName()])->save();
-
-
-        $order = Order::create([
+        $order = new Order([
             'rangkap' => $request->post('rangkap'),
             'tinta' => $request->post('tinta'),
             'jenis_kertas' => $request->post('jenis_kertas'),
             'jilid' => $request->post('jilid'),
             'jasa_antar' => $request->post('jasa_antar'),
-            'file' => $request->file('file')->getClientOriginalName(),
+            'file' => $request->post('file'),
             'takenTime' => $request->post('takenTime'),
             'notes' => $request->post('notes'),
             'agreement' => $request->post('agreement')
         ]);
 
-        $order->save();
-        //$fileName = getClientOriginalName().'.'.request()->file->getClientOriginalExtension();
-        //$fileName = "fileName".time().'.'.request()->file->getClientOriginalExtension();
-        $request->file->store('files');
-        return redirect('/')->with('success', 'Order saved!');
+        $order -> save();
+        //return redirect('/')->with('success', 'Order saved!');
+        return view('/');
     }
 }

@@ -19,11 +19,13 @@ class CreateOrdersTable extends Migration
             $table->string('tinta');
             $table->string('jenis_kertas');
             $table->string('jilid');
-            $table->string('jasa_antar');
+            $table->boolean('jasa_antar');
             $table->string('file');
-            $table->string('takenTime');
+            $table->time('takenTime');
             $table->text('notes');
-            $table->string('agreement');
+            $table->boolean('agreement');
+            $table->integer('vendor_id')->unsigned()->index();
+            $table->integer('customer_id')->unsigned()->index();
             $table->timestamps();
         });
     }
