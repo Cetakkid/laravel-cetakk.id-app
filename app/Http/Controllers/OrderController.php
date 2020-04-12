@@ -18,7 +18,7 @@ class OrderController extends Controller
             'jenis_kertas' => 'required|max:50',
             'jilid' => 'required|max:100',
             'jasa_antar' => 'required|boolean',
-            'file' => 'required|boolean|file|mimes:ppt,pptx,doc,docx,pdf,xls,xlsx|max:204800',
+            'file' => 'required|file|mimes:ppt,pptx,doc,docx,pdf,xls,xlsx|max:204800',
             'takenTime' => 'required',
             'notes' => 'required|min:3|max:1000',
             'agreement' => 'accepted'
