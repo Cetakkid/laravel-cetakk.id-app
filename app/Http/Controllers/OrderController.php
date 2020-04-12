@@ -13,15 +13,15 @@ class OrderController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'rangkap' => 'required',
-            'tinta' => 'required',
-            'jenis_kertas' => 'required',
-            'jilid' => 'required',
-            'jasa_antar' => 'required',
-            'file' => 'required',
+            'rangkap' => 'required|integer|between:1,100',
+            'tinta' => 'required|max:50',
+            'jenis_kertas' => 'required|max:50',
+            'jilid' => 'required|max:100',
+            'jasa_antar' => 'required|boolean',
+            'file' => 'required|boolean|file|mimes:ppt,pptx,doc,docx,pdf,xls,xlsx|max:204800',
             'takenTime' => 'required',
-            'notes' => 'required',
-            'agreement' => 'required'
+            'notes' => 'required|min:3|max:1000',
+            'agreement' => 'accepted'
         ]);
 
         $order = new Order([
